@@ -1,0 +1,145 @@
+
+  /* ===== Global adjustments ===== */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* ===== Header ===== */
+  #navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+  }
+  
+  #navbar li a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+  }
+  
+  #mobile {
+    display: none;
+  }
+  
+  /* ===== Hero Section ===== */
+  #img-slider img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .info {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* ===== Features Section ===== */
+  #feature {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* ===== Products Section ===== */
+  .pro-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .pro {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  /* ===== Footer ===== */
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* ===== Media Queries ===== */
+  
+  /* Tablets */
+  @media (max-width: 1024px) {
+    #feature {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .pro-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Mobile Phones */
+  @media (max-width: 768px) {
+    #navbar {
+      display: none;
+    }
+  
+    #mobile {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+  
+    #feature {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .pro-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .info {
+      font-size: 14px;
+      top: 25%;
+    }
+  }
+  
+  /* Small phones */
+  @media (max-width: 480px) {
+    #feature {
+      grid-template-columns: 1fr;
+    }
+  
+    .info h1 {
+      font-size: 18px;
+    }
+  
+    .info h2 {
+      font-size: 16px;
+    }
+  
+    .info h4, .info p {
+      font-size: 14px;
+    }
+  
+    .pro h5, .pro h4 {
+      font-size: 14px;
+    }
+  
+    .footer-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  
